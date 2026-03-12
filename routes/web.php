@@ -1,16 +1,11 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
-Route::get('/', function () {
-    return view('welcome');
-    
-});
-Route::get('/hola', function () {
-    return "Hola Mundo desde Laravel";
-});
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+
+Route::get('/', function () {
+    return redirect('/productos');
+});
 
 Route::get('/productos', function () {
 
